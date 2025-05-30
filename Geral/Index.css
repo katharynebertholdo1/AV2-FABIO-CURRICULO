@@ -1,0 +1,297 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+}
+
+/* Estilo da caixa de confirmação */
+.confirmacao {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  color: black; /* Para legibilidade */
+  width: 300px;
+  text-align: center;
+}
+
+
+.confirmacao input[type="text"] {
+  width: 90%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
+
+.confirmacao button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.confirmacao button:hover {
+  background-color: #5a67d8;
+}
+
+
+/* Navbar desktop */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(30, 40, 80, 0.85);
+  color: white;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #fff;
+  background-color: #5a67d8;
+  box-shadow: 0 4px 8px rgba(90, 103, 216, 0.6), 0 0 12px rgba(90, 103, 216, 0.8);
+  transform: translateY(-3px);
+}
+
+/* Conteúdo principal */
+.main-content {
+  margin-top: 70px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Botão principal */
+.btn-criar {
+  background-color: #667eea;
+  color: white;
+  padding: 16px 38px;
+  font-size: 20px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.5);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  display: block;
+  width: 100%;
+  font-weight: 700;
+}
+
+.btn-criar:hover {
+  background-color: #5a67d8;
+  box-shadow: 0 10px 25px rgba(90, 103, 216, 0.7);
+  transform: translateY(-4px);
+}
+
+/* Título */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: rgb(102, 126, 234, 0.5);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulário */
+.form-curriculo {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 18px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  color: rgb(102, 126, 234, 0.5);
+  text-align: left;
+}
+
+.form-curriculo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.form-curriculo input[type="text"],
+.form-curriculo select,
+.form-curriculo textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(102, 126, 234, 0.5);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-curriculo input[type="text"]:focus,
+.form-curriculo select:focus,
+.form-curriculo textarea:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+  box-shadow: 0 0 8px 2px #667eea;
+  color: #1e40af;
+}
+/*MeusCurriculos*/
+.curriculo-card {
+  background-color: rgba(255, 255, 255, 0.15); /* fundo transparente */
+  color: #6373bd; /* texto branco */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* leve sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curriculo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.curriculo-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.curriculo-card p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.btn-apagar {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-apagar:hover {
+  background-color: #d9363e;
+  transform: translateY(-3px);
+}
+
+.filtro-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  padding-left: 1000px;
+}
+
+.input-filtro {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+    z-index: 1100;
+  }
+
+  .navbar .logo {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    margin-top: 0;
+    padding: 30px 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .main-content {
+    margin-top: 70px;
+    margin-left: 0;
+  }
+}

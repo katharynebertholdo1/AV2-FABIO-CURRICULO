@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workspace - Criar Currículo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="Index.css" />
+  <script src="workspace.js" defer></script> <!-- O JS será carregado corretamente -->
+</head>
+
+<body>
+  <!-- Caixa de confirmação, oculta inicialmente -->
+  <div id="confirmacao" class="confirmacao">
+    <p>Insira um nome para o currículo:</p>
+    <input type="text" id="nomeCurriculoInput" placeholder="Ex: Meu Currículo" autocomplete="off" />
+    <br /><br />
+    <button id="btnConfirmar">Confirmar</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Sistema de Currículos</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Início</a></li>
+      <li><a href="Workspace.html" class="active">Workspace</a></li>
+      <li><a href="MeusCurriculos.html">Meus Currículos</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <form id="form-curriculo" class="form-curriculo" novalidate>
+      <h1>Criar Currículo</h1>
+
+      <label for="nome">Nome completo *</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required autocomplete="off" />
+
+      <label for="area">Área de interesse *</label>
+      <select id="area" name="area" required>
+        <option value="" disabled selected>Selecione a área</option>
+        <option value="TI">Tecnologia da Informação</option>
+        <option value="Administracao">Administração</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Financas">Finanças</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <label for="experiencia">Resumo da experiência *</label>
+      <textarea
+        id="experiencia"
+        name="experiencia"
+        rows="5"
+        placeholder="Descreva sua experiência profissional"
+        required
+        autocomplete="off"
+      ></textarea>
+
+      <button type="submit" class="btn-criar">Salvar Currículo</button>
+    </form>
+  </main>
+</body>
+</html>

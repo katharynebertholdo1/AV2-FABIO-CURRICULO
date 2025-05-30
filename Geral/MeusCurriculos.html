@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meus Currículos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="Index.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Sistema de Currículos</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Início</a></li>
+      <li><a href="workspace.html">Workspace</a></li>
+      <li><a href="MeusCurriculos.html" class="active">Meus Currículos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+    <div class="curriculos-container">
+      <h1>Meus Currículos</h1>
+
+      <!-- Campo de filtro alinhado à direita -->
+      <div class="filtro-container">
+        <input 
+          type="text" 
+          id="filtro-nome" 
+          placeholder="Filtrar por nome..." 
+          class="input-filtro"
+        />
+      </div>
+
+      <!-- Lista de currículos -->
+      <div id="lista-curriculos" class="grid-curriculos">
+        <!-- Currículos salvos serão exibidos aqui -->
+      </div>
+    </div>
+  </main>
+
+  <script src="meuscurriculos.js"></script>
+</body>
+</html>

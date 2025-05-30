@@ -1,0 +1,10 @@
+1 - O tema do projeto é disponibilizar para alunos uma plataforma que cria,armazena e filtra curriculos criados pelo usuário.
+1.1 - É fácil e possui boa visualização, pois o foco é para alunos
+
+2 - Ele deverá criar um curriculo com os dados que o aluno inserir
+2.1 - Ele deverá armazenar o curriculo feito pelo aluno
+2.2 - Ele deverá filtrar todos os curriculos de acordo com uma condição
+
+3 - Ele terá uma página inicial já com a opção de fazer o curriculo
+3.1 - Ele terá uma segunda página com dicas e exemplos de como e o que colocar no curriculo
+3.2 - Ele terá uma terceira página com os curriculos feitos e a opção de filtração
