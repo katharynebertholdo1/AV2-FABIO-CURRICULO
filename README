@@ -1,10 +1,40 @@
-1 - O tema do projeto é disponibilizar para alunos uma plataforma que cria,armazena e filtra curriculos criados pelo usuário.
-1.1 - É fácil e possui boa visualização, pois o foco é para alunos
+💼 Sistema de Cadastro de Currículos de Alunos
+🎯 Tema do Projeto
+O tema do projeto é desenvolver uma plataforma web voltada para alunos, que permite criar, armazenar e filtrar currículos de forma prática e visualmente acessível.
 
-2 - Ele deverá criar um curriculo com os dados que o aluno inserir
-2.1 - Ele deverá armazenar o curriculo feito pelo aluno
-2.2 - Ele deverá filtrar todos os curriculos de acordo com uma condição
+🧠 Objetivo da Aplicação
+Este sistema foi desenvolvido com o objetivo de:
 
-3 - Ele terá uma página inicial já com a opção de fazer o curriculo
-3.1 - Ele terá uma segunda página com dicas e exemplos de como e o que colocar no curriculo
-3.2 - Ele terá uma terceira página com os curriculos feitos e a opção de filtração
+Permitir que o aluno crie seu próprio currículo preenchendo um formulário com dados essenciais.
+
+Armazenar os currículos criados localmente usando JavaScript.
+
+Oferecer uma funcionalidade de filtro para listar currículos com base na área de interesse.
+
+🖼️ Estrutura da Interface
+O sistema está dividido em três páginas principais:
+
+Página Inicial – Apresenta a opção de criar um novo currículo.
+
+Página de Dicas – Contém orientações e exemplos de como preencher corretamente um currículo.
+
+Página "Meus Currículos" – Lista os currículos já criados e permite filtrá-los por área de interesse.
+
+📋 Funcionalidades
+Formulário com campos: nome, área de interesse e experiência.
+
+Botões para cadastrar e listar currículos.
+
+Filtro de currículos por área de interesse.
+
+Visualização organizada dos dados cadastrados.
+
+🧩 Tecnologias Utilizadas
+HTML
+
+CSS
+
+JavaScript (com lógica simulando Programação Orientada a Objetos)
+
+🙋‍♂️ Interação com o Usuário
+O usuário preenche o formulário e envia os dados com um botão de "Cadastrar". Em outra página, ele pode visualizar todos os currículos e aplicar um filtro. Tudo é feito de forma intuitiva e amigável para alunos.
