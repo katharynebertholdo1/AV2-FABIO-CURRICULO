@@ -1,16 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("form-curriculo");
-    const confirmacaoDiv = document.getElementById("confirmacao");
-    const nomeCurriculoInput = document.getElementById("nomeCurriculoInput");
-    const btnConfirmar = document.getElementById("btnConfirmar");
-    // Removido: const listaCurriculos = document.getElementById("lista-curriculos");
+class CurriculoApp {
+    constructor() {
+        this.form = document.getElementById("form-curriculo");
+        this.confirmacaoDiv = document.getElementById("confirmacao");
+        this.nomeCurriculoInput = document.getElementById("nomeCurriculoInput");
+        this.btnConfirmar = document.getElementById("btnConfirmar");
 
-    let formData = {};
+        this.formData = {};
 
-    form.addEventListener("submit", (event) => {
+        this.initEventListeners();
+    }
+
+    initEventListeners() {
+        this.form.addEventListener("submit", (event) => this.handleFormSubmit(event));
+        this.btnConfirmar.addEventListener("click", () => this.confirmarCurriculo());
+    }
+
+    handleFormSubmit(event) {
         event.preventDefault();
 
-        if (!form.checkValidity()) {
+        if (!this.form.checkValidity()) {
             alert("Preencha todos os campos obrigatórios.");
             return;
         }
@@ -19,14 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const area = document.getElementById("area").value;
         const experiencia = document.getElementById("experiencia").value;
 
-        formData = { nome, area, experiencia };
-        console.log("Form Data:", formData);
-        confirmacaoDiv.style.display = 'block';
-    });
+        this.formData = { nome, area, experiencia };
+        console.log("Form Data:", this.formData);
 
-    btnConfirmar.addEventListener("click", () => {
+        this.confirmacaoDiv.style.display = 'block';
+    }
+
+    confirmarCurriculo() {
         let curriculos = JSON.parse(localStorage.getItem("curriculos")) || [];
-        let nomeEscolhido = nomeCurriculoInput.value.trim();
+        let nomeEscolhido = this.nomeCurriculoInput.value.trim();
 
         const nomesExistentes = curriculos.map(c => c.nome);
 
@@ -44,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const novoCurriculo = {
             nome: nomeEscolhido,
-            nomePessoa: formData.nome, // <-- Aqui!
-            area: formData.area,
-            experiencia: formData.experiencia
+            nomePessoa: this.formData.nome,
+            area: this.formData.area,
+            experiencia: this.formData.experiencia
         };
 
         curriculos.push(novoCurriculo);
@@ -54,13 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         alert(`Currículo "${nomeEscolhido}" salvo com sucesso!`);
 
-        confirmacaoDiv.style.display = 'none';
-        nomeCurriculoInput.value = "";
-        form.reset();
+        this.resetForm();
+    }
 
-        // Removido: carregarCurriculos(); // Não chamar aqui, pois não há lista para carregar nesta página
-    });
+    resetForm() {
+        this.confirmacaoDiv.style.display = 'none';
+        this.nomeCurriculoInput.value = "";
+        this.form.reset();
+    }
+}
 
-    // Removido toda a definição da função carregarCurriculos e o código do botão de apagar
-    // Esses elementos pertencem exclusivamente ao meuscurriculos.js
+// Inicializar a aplicação quando o DOM estiver carregado
+document.addEventListener("DOMContentLoaded", () => {
+    new CurriculoApp();
 });
