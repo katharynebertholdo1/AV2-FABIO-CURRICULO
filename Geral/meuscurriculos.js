@@ -42,7 +42,7 @@ class GerenciadorCurriculos {
 
   filtrarCurriculos(curriculos, filtroNome, filtroArea) {
     return curriculos.filter(curriculo => {
-      const nomeMatch = curriculo.nomePessoa.toLowerCase().includes(filtroNome.toLowerCase());
+      const nomeMatch = curriculo.nome.toLowerCase().includes(filtroNome.toLowerCase()); // ← Alterado aqui
       const areaMatch = filtroArea === "" || curriculo.area === filtroArea;
       return nomeMatch && areaMatch;
     });
